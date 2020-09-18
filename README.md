@@ -1,4 +1,5 @@
 <h1 align="center">ROS Noetic Setup (Ubuntu 20.04)</h1>
+Step by step method to install ROS Noetic in Ubuntu 20.04. The issues regarding "rosdep" is also resolved here.
 
 ## Install
 ```
