@@ -58,20 +58,20 @@ catkin_make
 roscore
 ```
 
-rosrun <package> <node>
+rosrun [package] [node]
 ```
 rosrun turtlesim turtlesim_node
 ```
-rosrun <package> <node> __name:=<assigned_new_node_name>
+rosrun [package] [node] __name:=[assigned_new_node_name]
 ```
 rosrun turtlesim turtlesim_node __name:=my_turtle
 ```
 
-rospack depends <package>
+rospack depends [package]
 ```
 rospack depends turtlesim
 ```
-rospack depends1 <package>
+rospack depends1 [package]
 ```
 rospack depends1 turtlesim
 ```
