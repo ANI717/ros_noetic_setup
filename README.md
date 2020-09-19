@@ -52,3 +52,81 @@ Edit "/catkin_ws/src/beginner_tutorials/package.xml" file
 cd ~/catkin_ws
 catkin_make
 ```
+
+## Basic Commands
+```
+roscore
+```
+
+rosrun <package> <node>
+```
+rosrun turtlesim turtlesim_node
+```
+rosrun <package> <node> __name:=<assigned_new_node_name>
+```
+rosrun turtlesim turtlesim_node __name:=my_turtle
+```
+
+rospack depends <package>
+```
+rospack depends turtlesim
+```
+rospack depends1 <package>
+```
+rospack depends1 turtlesim
+```
+
+
+rosnode -h
+rosnode list
+rosnode cleanup
+
+
+rostopic -h
+rostopic list
+rostopic list -v
+rostopic info <topic>
+rostopic echo <topic>
+rostopic type <topic>
+
+rosmsg show <topic type>
+
+rostopic pub -h
+rostopic pub [topic] [msg_type] [args]
+rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, 1.8]'
+
+rostopic hz [topic]
+rostopic hz /turtle1/pose
+
+
+rosrun rqt_graph rqt_graph
+rosrun rqt_plot rqt_plot
+
+
+rosservice -h
+rosservice list
+
+rosservice type [service]
+rosservice type /clear
+
+rosservice call [service] [args]
+rosservice call /clear
+rosservice call /spawn 2 2 0.2 ""
+
+
+rosparam -h
+rosparam list
+
+rosparam get [param_name]
+rosparam set /turtlesim/background_r
+rosparam get /
+
+rosparam set [param_name] <values>
+rosparam set /turtlesim/background_r 150
+rosservice call /clear
+
+rosparam dump [file_name] [namespace]
+rosparam dump params.yaml
+
+rosparam load [file_name] [namespace]
+rosparam load params.yaml copy_turtle
